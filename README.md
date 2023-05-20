@@ -26,7 +26,7 @@
 
 # 1️⃣ Create two instances having Apache webservers running on it
 ###  For more info on creating instances with apache webservers visit:
-### https://github.com/DURGESH99P/AWS-Labs/blob/main/AWS%20docs/LAMP%20stack/Apache%20website%20(1).pdf
+### https://github.com/DURGESH99P/Application-load-balancer-Datapipeline-and-Data-analysis-Project-/blob/main/Supportive%20Documents/Apache%20website.pdf
 
 ---
 
