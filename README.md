@@ -12,8 +12,9 @@
         <li style ="font-weight:400;font-size:18.5px"><strong>Seamless Integration:</strong> The project demonstrates how to configure an S3 bucket to receive ALB logs and set up a data pipeline to process them.</li>
         <li style ="font-weight:400;font-size:18.5px"><strong>Athena Querying:</strong> Using AWS Athena, the repository showcases how to define a schema for ALB logs and query the data using SQL syntax, enabling efficient analysis and retrieval of specific information.</li>
         <li style ="font-weight:400;font-size:18.5px"><strong>Quicksight Visualization:</strong> With AWS Quicksight, the repository illustrates how to create interactive and visually appealing dashboards to gain insights from the ALB log data.</li>
-        <li style ="font-weight:400;font-size:18.5px"><strong>Auto Scaling Integration:</strong> The solution supports auto scaling of the EC2 instances hosting the web page, allowing for dynamic scaling of resources based on demand. The maximum number of instances is set to two.</li>
+        <li style ="font-weight:400;font-size:18.5px"><strong>Auto Scaling Integration:</strong> The solution supports auto scaling of the EC2 instances hosting the web page, allowing for dynamic scaling of resources based on demand. The maximum number of instances can be set according to your requirement.</li>
         <li style ="font-weight:400;font-size:18.5px"><strong>Streamlined Deployment:</strong> The project includes step-by-step instructions and configuration files to quickly deploy the ALB log analysis solution in your own AWS environment.</li>
+        <li style ="font-weight:400;font-size:18.5px"><strong>Data:</strong> The Log Data for the project was colleced for 5 days.</li>
     </ul>
     <p style ="font-weight:400;font-size:18.5px">By leveraging the power of Athena, Quicksight, and S3 integration, this repository offers an efficient and scalable solution for analyzing ALB logs. Gain valuable insights into your web traffic patterns, detect anomalies, and optimize your application performance.</p>
 </body>
@@ -70,10 +71,10 @@
             "Sid": "AWSConsoleStmt-1668943070662",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::718504428378:root"
+                "AWS": "arn:aws:iam::elb-account-id:root"
             },
             "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::webserveralblog/prefix/AWSLogs/436117849909/*"
+            "Resource": "arn:aws:s3:::webserveralblog/prefix/AWSLogs/your-account-id/*"
         },
         {
             "Sid": "AWSLogDeliveryWrite",
@@ -82,7 +83,7 @@
                 "Service": "delivery.logs.amazonaws.com"
             },
             "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::webserveralblog/prefix/AWSLogs/436117849909/*",
+            "Resource": "arn:aws:s3:::webserveralblog/prefix/AWSLogs/your-account-id/*",
             "Condition": {
                 "StringEquals": {
                     "s3:x-amz-acl": "bucket-owner-full-control"
