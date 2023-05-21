@@ -1,0 +1,11 @@
+• Enable access logs for your Load balancer
+https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html
+
+• Query for For making Table for Application LoadBalancer
+https://docs.aws.amazon.com/athena/latest/ug/application-load-balancer-logs.html
+
+• Amazon Athena Documentation
+https://docs.aws.amazon.com/athena/index.html
+
+• Amazon Quicksight
+https://docs.aws.amazon.com/quicksight/index.html
